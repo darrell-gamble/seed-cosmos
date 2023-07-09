@@ -1,0 +1,15 @@
+C:\projects\SeedCosmos\bin\Debug\net7.0\SeedCosmos.exe
+C:\projects\SeedCosmos\bin\Debug\net7.0\SeedCosmos.deps.json
+C:\projects\SeedCosmos\bin\Debug\net7.0\SeedCosmos.runtimeconfig.json
+C:\projects\SeedCosmos\bin\Debug\net7.0\SeedCosmos.dll
+C:\projects\SeedCosmos\bin\Debug\net7.0\SeedCosmos.pdb
+C:\projects\SeedCosmos\obj\Debug\net7.0\SeedCosmos.csproj.AssemblyReference.cache
+C:\projects\SeedCosmos\obj\Debug\net7.0\SeedCosmos.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\SeedCosmos\obj\Debug\net7.0\SeedCosmos.AssemblyInfoInputs.cache
+C:\projects\SeedCosmos\obj\Debug\net7.0\SeedCosmos.AssemblyInfo.cs
+C:\projects\SeedCosmos\obj\Debug\net7.0\SeedCosmos.csproj.CoreCompileInputs.cache
+C:\projects\SeedCosmos\obj\Debug\net7.0\SeedCosmos.dll
+C:\projects\SeedCosmos\obj\Debug\net7.0\refint\SeedCosmos.dll
+C:\projects\SeedCosmos\obj\Debug\net7.0\SeedCosmos.pdb
+C:\projects\SeedCosmos\obj\Debug\net7.0\SeedCosmos.genruntimeconfig.cache
+C:\projects\SeedCosmos\obj\Debug\net7.0\ref\SeedCosmos.dll
