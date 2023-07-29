@@ -1,3 +1,4 @@
 {
-    "dotnet.defaultSolution": "SeedCosmos.sln"
+    "dotnet.defaultSolution": "SeedCosmos.sln",
+    "WhiteSource Advise.Diff.BaseBranch": "main"
 }

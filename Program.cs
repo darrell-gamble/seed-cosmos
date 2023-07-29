@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using UjuziTek.Portal.Data;
+using UjuziTek.Portal.Models;
+using Microsoft.EntityFrameworkCore;
+
+using (var ctx = new PortalDBContext()) {
+    
+}

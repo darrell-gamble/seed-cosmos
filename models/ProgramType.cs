@@ -1,8 +1,14 @@
-namespace UjuziTek.Portal.Models
+
+namespace UjuziTek.Portal.Models;
+public class ProgramType
 {
-    public class ProgramType
+    public string ID { get; private init; } = Guid.NewGuid().ToString();
+    public string Id { get; }
+    public string Name { get; private set; } = "";
+    public ProgramType(string id, string name)
     {
-        public string ProgramTypeID { get; private set; } = "";
-        public string Name { get; private set; } = "";
+        Id = id;
+        Name = name;
     }
+    public List<Program>? Programs { get; set; } = new List<Program>();
 }
