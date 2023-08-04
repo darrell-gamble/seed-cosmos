@@ -30,7 +30,7 @@ public class PortalDBContext : DbContext
             .ToContainer("ProgramTypes")
             .HasPartitionKey(e => e.ID)
             .HasMany(x => x.Programs);
-            .HasMany(x => x.CurriculumLevels)
+            .HasMany(x => x.CurriculumLevels);
     
         modelBuilder.Entity<Program>()
             .ToContainer("Programs")
