@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "c:\\projects\\SeedCosmos\\SeedCosmos.csproj": {}
+    "C:\\projects\\Blazor\\SeedCosmos\\SeedCosmos.csproj": {}
   },
   "projects": {
-    "c:\\projects\\SeedCosmos\\SeedCosmos.csproj": {
+    "C:\\projects\\Blazor\\SeedCosmos\\SeedCosmos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\projects\\SeedCosmos\\SeedCosmos.csproj",
+        "projectUniqueName": "C:\\projects\\Blazor\\SeedCosmos\\SeedCosmos.csproj",
         "projectName": "SeedCosmos",
-        "projectPath": "c:\\projects\\SeedCosmos\\SeedCosmos.csproj",
+        "projectPath": "C:\\projects\\Blazor\\SeedCosmos\\SeedCosmos.csproj",
         "packagesPath": "C:\\Users\\darre\\.nuget\\packages\\",
-        "outputPath": "c:\\projects\\SeedCosmos\\obj\\",
+        "outputPath": "C:\\projects\\Blazor\\SeedCosmos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\darre\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\darre\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }

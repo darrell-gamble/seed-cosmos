@@ -1,4 +1,3 @@
-
 namespace UjuziTek.Portal.Models;
 
 public class Program
@@ -11,14 +10,12 @@ public class Program
 
     public Program
         (
-            string programID,
             string name,
             string description,
             string programTypeID,
             string techDomainID
         )
     {
-        ID = programID;
         Name = name;
         Description = description;
         ProgramTypeID = programTypeID;
@@ -26,4 +23,5 @@ public class Program
     }
 
     public List<Curriculum>? Curricula { get; set; } = new List<Curriculum>();
+        public List<CurriculumLevel>? CurriculumLevels { get; set; } = new List<CurriculumLevel>();
 }

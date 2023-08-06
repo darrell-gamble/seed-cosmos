@@ -1,21 +1,21 @@
 using Microsoft.Azure.Cosmos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using UjuziTek.Portal.Models;
+using Models = UjuziTek.Portal.Models;
 
 namespace UjuziTek.Portal.Data;
 public class PortalDBContext : DbContext
 {
-    public DbSet<CurriculumOwner>? CurriculumOwners { get; set; }
-    public DbSet<Curriculum>? Curricula { get; set; }
-    public DbSet<CurriculumLevel>? CurriculumLevels { get; set; }
-    public DbSet<Course>? Courses { get; set; }
-    public DbSet<Member>? Members { get; set; }
-    public DbSet<ProgramStatus>? ProgramStatuses { get; set; }
-    public DbSet<ProgramType>? ProgramTypes { get; set; }
-    public DbSet<UjuziTek.Portal.Models.Program>? Programs { get; set; }
-    public DbSet<Subject>? Subjects { get; set; }
-    public DbSet<TechDomain>? TechDomains { get; set; }
+    public DbSet<Models.CurriculumOwner>? CurriculumOwners { get; set; }
+    public DbSet<Models.Curriculum>? Curricula { get; set; }
+    public DbSet<Models.CurriculumLevel>? CurriculumLevels { get; set; }
+    public DbSet<Models.Course>? Courses { get; set; }
+    public DbSet<Models.Member>? Members { get; set; }
+    public DbSet<Models.ProgramStatus>? ProgramStatuses { get; set; }
+    public DbSet<Models.ProgramType>? ProgramTypes { get; set; }
+    public DbSet<Models.Program>? Programs { get; set; }
+    public DbSet<Models.Subject>? Subjects { get; set; }
+    public DbSet<Models.TechDomain>? TechDomains { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseCosmos(
@@ -26,55 +26,56 @@ public class PortalDBContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<ProgramType>()
+        modelBuilder.Entity<Models.ProgramType>()
             .ToContainer("ProgramTypes")
             .HasPartitionKey(e => e.ID)
-            .HasMany(x => x.Programs);
-            .HasMany(x => x.CurriculumLevels);
+            .OwnsMany(x => x.Programs);
+            // .OwnsMany(x => x.CurriculumLevels);
     
-        modelBuilder.Entity<Program>()
+        modelBuilder.Entity<Models.Program>()
             .ToContainer("Programs")
             .HasPartitionKey(e => e.ID)
             .HasMany(x => x.Curricula);
     
-        modelBuilder.Entity<Curriculum>()
+        modelBuilder.Entity<Models.Curriculum>()
             .ToContainer("Curricula")
-            .HasPartitionKey(e => e.ID);
+            .HasPartitionKey(e => e.ID)
+            .OwnsMany(x => x.Curricula);
     
-        modelBuilder.Entity<CurriculumOwner>()
+        modelBuilder.Entity<Models.CurriculumOwner>()
             .ToContainer("CurriculumOwners")
             .HasPartitionKey(e => e.ID)
-            .HasMany(x => x.Curriculum);
+            .HasMany(x => x.Curricula);
     
-        modelBuilder.Entity<CurriculumLevel>()
+        modelBuilder.Entity<Models.CurriculumLevel>()
             .ToContainer("CurriculumLevels")
             .HasPartitionKey(e => e.ID)
             .HasMany(x => x.Curricula);
     
-        modelBuilder.Entity<Course>()
+        modelBuilder.Entity<Models.Course>()
             .ToContainer("Courses")
             .HasPartitionKey(e => e.ID)
             .HasMany(x => x.Members);
     
-        modelBuilder.Entity<TechDomain>()
+        modelBuilder.Entity<Models.TechDomain>()
             .ToContainer("TechDomains")
             .HasPartitionKey(e => e.ID)
             .HasMany(x => x.Programs);
     
-        modelBuilder.Entity<ProgramStatus>()
+        modelBuilder.Entity<Models.ProgramStatus>()
             .ToContainer("ProgramStatuses")
             .HasPartitionKey(e => e.ID)
             .HasMany(x => x.Programs);
     
-        modelBuilder.Entity<Subject>()
+        modelBuilder.Entity<Models.Subject>()
             .ToContainer("Subjects")
             .HasPartitionKey(e => e.ID);
     
-        modelBuilder.Entity<Member>()
+        modelBuilder.Entity<Models.Member>()
             .ToContainer("Members")
             .HasPartitionKey(e => e.ID);
     
-        modelBuilder.Entity<Topic>()
+        modelBuilder.Entity<Models.Topic>()
             .ToContainer("Topics")
             .HasPartitionKey(e => e.ID)
             .HasMany(x => x.Subjects);

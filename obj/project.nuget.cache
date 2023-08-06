@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5QIRvGE7pMf+gaw5varu5z/zS7bX/A/EdIF+kMzXsQgmU/LfYti9uMCUZG7IHRf2zkiKH0DeX26gOhoPa6slxA==",
+  "dgSpecHash": "Rk11PlweMvH5WRWEEPQDpfNoS+OHIJVnRy6Bn7YBydycnHAhpwCb5ig0oXZ8epBTe5SvrcR2CNnnktpihoq/lQ==",
   "success": true,
-  "projectFilePath": "c:\\projects\\SeedCosmos\\SeedCosmos.csproj",
+  "projectFilePath": "C:\\projects\\Blazor\\SeedCosmos\\SeedCosmos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\darre\\.nuget\\packages\\azure.core\\1.19.0\\azure.core.1.19.0.nupkg.sha512",
     "C:\\Users\\darre\\.nuget\\packages\\azure.identity\\1.4.0\\azure.identity.1.4.0.nupkg.sha512",
