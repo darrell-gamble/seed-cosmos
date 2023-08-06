@@ -1,4 +1,8 @@
-## Data Structure
+
+## Purpose
+This branch is a console app to hash out the UjuziTek Portal data structures.
+
+## Portal Data Cardinality
 ![Alt text](<MarkdownImages/PortalERD.jpg>)
 
 #### Some of the git Commands used
