@@ -12,4 +12,7 @@ git pull "https://github.com/darrell-gamble/seed-cosmos.git" main <br />
 git push --set-upstream origin main (or if you need to force local:  git push -f https://github.com/darrell-gamble/seed-cosmos.git main)<br />
 <br />
 
+## VS Code Environment Extensions
+Code snippets Primer:  https://www.youtube.com/watch?v=3flfk1h6_PE <br />
+
 

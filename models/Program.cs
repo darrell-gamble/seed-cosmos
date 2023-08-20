@@ -1,3 +1,4 @@
+
 namespace UjuziTek.Portal.Models;
 
 public class Program

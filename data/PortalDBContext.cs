@@ -30,56 +30,54 @@ public class PortalDBContext : DbContext
             .ToContainer("ProgramTypes")
             .HasPartitionKey(e => e.ID)
             .OwnsMany(x => x.Programs);
-            // .OwnsMany(x => x.CurriculumLevels);
-    
+        // .OwnsMany(x => x.CurriculumLevels);
+
         modelBuilder.Entity<Models.Program>()
             .ToContainer("Programs")
             .HasPartitionKey(e => e.ID)
             .HasMany(x => x.Curricula);
-    
+
         modelBuilder.Entity<Models.Curriculum>()
-            .ToContainer("Curricula")
+            .ToContainer("Curriculum")
             .HasPartitionKey(e => e.ID)
             .OwnsMany(x => x.Curricula);
-    
+
         modelBuilder.Entity<Models.CurriculumOwner>()
             .ToContainer("CurriculumOwners")
             .HasPartitionKey(e => e.ID)
             .HasMany(x => x.Curricula);
-    
+
         modelBuilder.Entity<Models.CurriculumLevel>()
             .ToContainer("CurriculumLevels")
             .HasPartitionKey(e => e.ID)
             .HasMany(x => x.Curricula);
-    
+
         modelBuilder.Entity<Models.Course>()
             .ToContainer("Courses")
             .HasPartitionKey(e => e.ID)
             .HasMany(x => x.Members);
-    
+
         modelBuilder.Entity<Models.TechDomain>()
             .ToContainer("TechDomains")
             .HasPartitionKey(e => e.ID)
             .HasMany(x => x.Programs);
-    
+
         modelBuilder.Entity<Models.ProgramStatus>()
             .ToContainer("ProgramStatuses")
             .HasPartitionKey(e => e.ID)
             .HasMany(x => x.Programs);
-    
+
         modelBuilder.Entity<Models.Subject>()
             .ToContainer("Subjects")
             .HasPartitionKey(e => e.ID);
-    
+
         modelBuilder.Entity<Models.Member>()
             .ToContainer("Members")
             .HasPartitionKey(e => e.ID);
-    
+
         modelBuilder.Entity<Models.Topic>()
             .ToContainer("Topics")
             .HasPartitionKey(e => e.ID)
             .HasMany(x => x.Subjects);
     }
-    
-    
 }
